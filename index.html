@@ -9,23 +9,65 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Priya singh</a>
+            <a class="navbar-brand fw-bold text-primary text-dark" href="../index.html">Priya Singh</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sections/research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sections/mentorship.html">Mentorship</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sections/teaching.html">Teaching Activities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sections/responsibilities.html">Responsibilities</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" id="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sections/research.html" id="research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sections/mentorship.html" id="mentorship">Mentorship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sections/teaching.html" id="teaching">Teaching Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sections/responsibilities.html" id="responsibilities">Responsibilities</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
+    <style>
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: #333;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 5px;
+        }
+    
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+    
+        .navbar-nav .nav-link.active {
+            background-color: #333; /* Dark background for active link */
+            color: white !important;
+            border-radius: 5px;
+        }
+    </style>
+    
+    <script>
+        // Highlight active page
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop(); // Get current file name
+            if (currentPage === "") currentPage = "index.html"; // Default to index.html
+            let activeLink = document.getElementById(currentPage.replace(".html", ""));
+            if (activeLink) activeLink.classList.add("active");
+        });
+    </script>
+    
 
     <!-- Hero Section -->
     <header class="bg-dark text-white text-center py-5">
@@ -49,7 +91,13 @@
             </div>
             <div class="col">
                 <div class="h-100 p-4 bg-light border rounded-3 ">
-                    <h3>Bio</h3>
+                    <div class="d-flex align-items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle me-2" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                        <h3 class="mb-0">Bio</h3>
+                    </div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quisquam deserunt debitis veritatis, provident similique exercitationem adipisci corporis dicta fuga? Neque praesentium perferendis asperiores hic eos dignissimos excepturi ea modi?</p>
                     <h3>Assistant professor</h3>
                     <ul style="list-style-type: none; padding: 0; margin: 0;">
@@ -58,23 +106,13 @@
                         <li>(Formerly Delhi College of Engineering)</li>
                         <li>Delhi, India</li>
                     </ul>
-                    <h3>Office</h3>
-                    <ul style="list-style-type: none; padding: 0; margin: 0;">
-                        <li>Dept. of Computer Science Engineering</li>
-                        <li>Delhi Technological University</li>
-                        <li>Shahbad Daulatpur, Main Bawana Road</li>
-                        <li>Delhi,India- 110042.</li>
-                    </ul>
+
 
                       
                     
         
-                    <h3>Contact Information:</h3>
-                    <ul style="list-style-type: none; padding: 0; margin: 0;">
-                        <li>priyasingh@dtu.ac.in</li>
-                        <li>priyasinghacademia@gmail.com</li>
-                        <li></li>
-                    </ul>
+
+                
                    
 
                    
@@ -86,33 +124,114 @@
             </div>
         </div>
     </div>
-
-    <!-- Jumbotron Section -->
+    <!--second section-->
     <div class="container my-4">
-        <div class="p-5 bg-light rounded-3 ">
-            <h2 class="display-5 fw-bold">Memberships</h2>
-            <ul style="list-style-type: none; padding: 0; margin: 0;">
-                <li>IEEE</li>
-                <li>ACM</li>
-                <li>CSI</li>
-            </ul>
-           
-           
-            <h2 class="display-5 fw-bold">Links</h2>
-            <ul>
-                <li><a href="https://www.google.com"  style="color: black;">Google Scholar</a>
-                </li>
-                <li><a href="https://www.google.com" style="color: black;">Web of...</a>
-                </li>
-                <li><a href="https://www.google.com" style="color: black;">Scopus</a>
-                </li>
-                <li><a href="https://www.google.com" style="color: black;">Research Gate</a>
-                </li>
-                <li><a href="https://www.google.com" style="color: black;">LinkedIn</a>
-                </li>
-            </ul>
-           
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="h-100 p-4 border rounded-3 bg-light">
+                    <!-- Flexbox for heading and icon -->
+                    <div class="d-flex align-items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill me-2" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697V12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4.697L8 9.586 0 4.697Z"/>
+                        </svg>
+                        <h3 class="m-0">Contact Information:</h3>
+                    </div>
+                    <!-- Contact details below -->
+                    <ul class="list-unstyled">
+                        <li>priyasingh@dtu.ac.in</li>
+                        <li>priyasinghacademia@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="h-100 p-4 bg-light border rounded-3">
+                    <!-- Flexbox for heading and icon -->
+                    <div class="d-flex align-items-center mb-2">
+                       
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                            <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                            <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"/>
+                          </svg>
+                        <h3 class="m-0">Office</h3>
+                    </div>
+                    <!-- Office details below -->
+                    <ul class="list-unstyled">
+                        <li>Dept. of Computer Science Engineering</li>
+                        <li>Delhi Technological University</li>
+                        <li>Shahbad Daulatpur, Main Bawana Road</li>
+                        <li>Delhi, India - 110042</li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
+    </div>
+    
+
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="h-100 p-4 border rounded-3 bg-light">
+                    <!-- Flexbox for heading and icon -->
+                    
+                        <div class="d-flex align-items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-people-fill me-2" viewBox="0 0 16 16">
+                                <path d="M13 6.5C13 5.67 12.33 5 11.5 5S10 5.67 10 6.5s.67 1.5 1.5 1.5S13 7.33 13 6.5ZM8 6.5C8 5.67 7.33 5 6.5 5S5 5.67 5 6.5 5.67 8 6.5 8 8 7.33 8 6.5ZM0 8c0-1.5 3-2 5-2s5 .5 5 2-3 2-5 2-5-.5-5-2Zm11 2c-.5 0-1-.03-1.5-.09.05-.16.08-.33.08-.5 0-1.5 3-2 5-2s5 .5 5 2-3 2-5 2c-.5 0-1-.03-1.5-.09a5.3 5.3 0 0 0 .08-.5c0-.17.03-.34.08-.5Z"/>
+                            </svg>
+                            <h3 class="m-0">Memberships</h3>
+                        </div>
+                        <!-- Membership list -->
+                        <ul class="list-unstyled">
+                            <li>IEEE</li>
+                            <li>ACM</li>
+                            <li>CSI</li>
+                        </ul>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="h-100 p-4 bg-light border rounded-3">
+                    <!-- Flexbox for heading and icon -->
+                    <div class="d-flex align-items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-briefcase-fill me-2" viewBox="0 0 16 16">
+                            <path d="M6.5 0a.5.5 0 0 0-.5.5V3h4V.5a.5.5 0 0 0-.5-.5zM5 3V.5A1.5 1.5 0 0 1 6.5-1h3A1.5 1.5 0 0 1 11 0v3h4a1 1 0 0 1 1 1v3H0V4a1 1 0 0 1 1-1zM0 8v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8zm5 2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3H5z"/>
+                        </svg>
+                        <h3 class="m-0">Experience</h3>
+                    </div>
+                    <!-- Office details below -->
+                    <ul class="list-unstyled">
+                        <li><strong>Industry Experience:</strong> 2.5 years, Oracle Pvt. Ltd., Bangalore, India</li>
+                        <li><strong>Teaching Experience:</strong> 4.5 years, Delhi Technological University, Delhi, India</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+  <!-- Jumbotron Section -->
+    <div class="container my-4">
+        <div class="p-5 bg-light rounded-3 border">
+            <!-- Flexbox for heading and icon -->
+            <div class="d-flex align-items-center mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-globe me-2" viewBox="0 0 16 16">
+                    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+                </svg>
+                <h3 class="m-0">Links</h3>
+            </div>
+            <!-- Links list -->
+            <ul class="list-unstyled">
+                <li><a href="https://www.google.com" class="text-dark text-decoration-none">Google Scholar</a></li>
+                <li><a href="https://www.google.com" class="text-dark text-decoration-none">Web of...</a></li>
+                <li><a href="https://www.google.com" class="text-dark text-decoration-none">Scopus</a></li>
+                <li><a href="https://www.google.com" class="text-dark text-decoration-none">Research Gate</a></li>
+                <li><a href="https://www.google.com" class="text-dark text-decoration-none">LinkedIn</a></li>
+            </ul>
+        </div>
+        
+        
     </div>
 
     <!-- Footer -->
@@ -123,4 +242,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
