@@ -9,23 +9,65 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Priya Singh</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="mentorship.html">Mentorship</a></li>
-                <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching Activities</a></li>
-                <li class="nav-item"><a class="nav-link" href="responsibilities.html">Responsibilities</a></li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary" href="../index.html">Priya Singh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" id="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html" id="research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mentorship.html" id="mentorship">Mentorship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teaching.html" id="teaching">Teaching Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="responsibilities.html" id="responsibilities">Responsibilities</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    
+    <style>
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: #333;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 5px;
+        }
+    
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+    
+        .navbar-nav .nav-link.active {
+            background-color: #333; /* Dark background for active link */
+            color: white !important;
+            border-radius: 5px;
+        }
+    </style>
+    
+    <script>
+        // Highlight active page
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop(); // Get current file name
+            if (currentPage === "") currentPage = "index.html"; // Default to index.html
+            let activeLink = document.getElementById(currentPage.replace(".html", ""));
+            if (activeLink) activeLink.classList.add("active");
+        });
+    </script>
 
 
     <!-- Hero Section -->
