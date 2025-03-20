@@ -6,7 +6,7 @@
     <title>Professor's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -34,11 +34,16 @@
             border-radius: 5px;
             
         }
+        .conference-item {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
       
     </style>
 </head>
 <body>
-
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
@@ -63,6 +68,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="responsibilities.html" id="responsibilities">Responsibilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="professional.html" id="responsibilities">Professional activities</a>
                     </li>
                 </ul>
             </div>
@@ -99,6 +107,7 @@
             if (activeLink) activeLink.classList.add("active");
         });
     </script>
+    
 
     <!-- Hero Section -->
     <header class="bg-dark text-white text-center py-5">
@@ -113,26 +122,93 @@
 
     <!-- Jumbotron Section -->
     <div class="container my-4">
-        <div class="p-5 bg-light rounded-3 ">
+        <div class="p-5 bg-light rounded-3">
             <h2 class="display-5 fw-bold">Conference</h2>
-            <ul style="list-style-type: none; padding: 0; margin: 0;">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit dolores ratione quis ipsam adipisci nisi, beatae sit. Impedit vitae, pariatur ullam voluptates eligendi possimus! Ad at quisquam neque ea reprehenderit?</p>
             
-           
-           
+            <div class="conference-section">
+                <h3>2024-2025</h3>
+                <p>[1] G. Sharma and P. Singh, "Comparative study: Word2Vec versus TF-IDF in software defect predictions," in <strong>Data Science and Network Engineering (ICDSNE 2024)</strong>, vol. 1165, S. Namasudra, N. Kar, S. K. Patra, and D. Taniar, Eds. Springer, Singapore, 2025. <a href="https://doi.org/10.1007/978-981-97-8336-6_8">doi: 10.1007/978-981-97-8336-6_8</a>.</p>
+                <p>[2] P. Singh, Ekansh, and M. Khattar, "Enhancing Tor-NonTor traffic classification across diverse classifiers," <strong>International Conference on Intelligent Computing and Communications Techniques</strong>, 2024.</p>
+                <p>[3] P. Singh, Anamika, and K. Singh, "Enhanced image captioning using scene text - a holistic survey," <strong>4th International Conference on Machine Learning and Big Data Analytics (ICMLBDA)</strong>, May 2024.</p>
+                <p>[4] P. Singh and P. S. Rathore, "Change in maintenance strategy for effective maintenance," <strong>Second International Conference on Computer Science, Cyber Security and Information Technology (CCIT)</strong>, 2024.</p>
+                <p>[5] P. Singh, I. Saxena, and Nikita, "Exploring the effectiveness of BERT for text summarization," <strong>3rd International Conference on Power Electronics, Intelligent Control, and Energy Systems (IEEE-ICPEICES-2024)</strong>, 2024.</p>
+                <p>[6] P. Singh, V. Sakhuja, and B. Ahuja, "Enhancing image captioning using ensemble learning and CLIP model," <strong>International Conference on Data Analytics and Management</strong>, 14th–15th June 2024.</p>
+                <p>[7] P. Singh and G. Sharma, "Comparative study: FastText vs. Doc2Vec in software defect predictions," <strong>Second International Conference on Inventive Computing and Informatics</strong>, 11th–12th June 2024.</p>
+                <p>[8] R. Malhotra and P. Singh, "Deep AST-based approach for software defect prediction: A comparative analysis," <strong>5th International Conference on Data Science and Applications (ICDSA 2024)</strong>, 17th–19th July 2024.</p>
+                <p>[9] R. Malhotra and P. Singh, "CodeBERT-BiGRU for software defect prediction," <strong>6th International Conference on Artificial Intelligence and Speech Technology (AIST 2025)</strong>, 2025.</p>
+            </div>
+            
+            <div class="conference-section">
+                <h3>2023-2024</h3>
+                <p>[10] P. Singh and A. Verma, "Empirical Validation of Deep Learning Based on Image Captioning Models," in <strong>Proceedings of the 7th International Conference on Advance Computing and Intelligent Engineering (ICACIE 2022)</strong>, B. Pati, C. R. Panigrahi, P. Mohapatra, and K. C. Li, Eds. Lecture Notes in Networks and Systems, vol. 1. Singapore: Springer, 2024. <a href="https://doi.org/10.1007/978-981-99-5015-7_38">doi: 10.1007/978-981-99-5015-7_38</a>.</p>
+                <p>[11] A. Thakur, Bhavishya, and P. Singh, "A Novel Deep Learning Based Fully Automated Framework for Captcha Security Vulnerability Checking," in <strong>Data Science and Network Engineering (ICDSNE 2023)</strong>, S. Namasudra, M. C. Trivedi, R. G. Crespo, and P. Lorenz, Eds. Lecture Notes in Networks and Systems, vol. 791. Singapore: Springer, 2024. <a href="https://doi.org/10.1007/978-981-99-6755-1_33">doi: 10.1007/978-981-99-6755-1_33</a>.</p>
+                <p>[12] P. Singh, C. Agrawal, and R. Bansal, "Performance Analysis of Image Caption Generation Techniques Using CNN-Based Encoder–Decoder Architecture," in <strong>Data Science and Network Engineering (ICDSNE 2023)</strong>, S. Namasudra, M. C. Trivedi, R. G. Crespo, and P. Lorenz, Eds. Lecture Notes in Networks and Systems, vol. 791. Singapore: Springer, 2024. <a href="https://doi.org/10.1007/978-981-99-6755-1_23">doi: 10.1007/978-981-99-6755-1_23</a>.</p>
+                <p>[13] D. Datta, H. Prakash, and P. Singh, "Skin Cancer Detection with Edge Devices Using YOLOv7 Deep CNN," in <strong>Proceedings of Data Analytics and Management (ICDAM 2023)</strong>, A. Swaroop, Z. Polkowski, S. D. Correia, and B. Virdee, Eds. Lecture Notes in Networks and Systems, vol. 787. Singapore: Springer, 2023. <a href="https://doi.org/10.1007/978-981-99-6550-2_5">doi: 10.1007/978-981-99-6550-2_5</a>.</p>
+                <p>[13] P. Singh, F. Raja, and H. Sharma, “Image Captions in Hindi Based on Encoder-Decoder Based Deep Learning Techniques," in <strong> in Reliability Engineering for Industrial Processes</strong>, P. K. Kapur, H. Pham, G. Singh, and V. Kumar, Eds. Springer Series in Reliability Engineering. Cham, Switzerland: Springer, 2024. <a href="https://doi.org/10.1007/978-3-031-55048-5_6">doi: 10.1007/978-3-031-55048-5_6                </a>.</p>
+                <p>[14] S. Shiwakoti, S. Bikram Shahi, and P. Singh, "Deep Learning Methods for Vehicle Trajectory Prediction: A Survey," in <strong>IoT Based Control Networks and Intelligent Systems (ICICNIS 2023)</strong>, P. P. Joby, M. S. Alencar, and P. Falkowski-Gilski, Eds. Lecture Notes in Networks and Systems, vol. 789. Singapore: Springer, 2024. <a href="https://doi.org/10.1007/978-981-99-6586-1_37">doi: 10.1007/978-981-99-6586-1_37</a>.</p>
+                <p>[13] P. Singh, F. Raja, and H. Sharma, “Image Captions in Hindi Based on Encoder-Decoder Based Deep Learning Techniques," in <strong> Generating image captions in Hindi based on encoder-decoder based deep learning techniques</strong>, P. K. Kapur, H. Pham, G. Singh, and V. Kumar, Eds. Springer Series in Reliability Engineering. Cham, 2024. <a href="https://doi.org/10.1007/978-3-031-55048-5_6">doi: 10.1007/978-3-031-55048-5_6                </a>.</p>
+            </div>
 
-           
+            <div class="conference-section">
+                <h3>2022-2023</h3>
+                <p>[15] R. Malhotra and P. Singh, "Recent advances in deep learning models: a systematic literature review," Multimedia Tools and Applications, 2023. doi: 10.1007/s11042-023-15295-z.</p>
+                <p>[16] P. Singh, C. Kumar, and A. Kumar, "Next-LSTM: a novel LSTM-based image captioning technique," International Journal of System Assurance Engineering and Management, vol. 14, pp. 1492–1503, 2023. doi: 10.1007/s13198-023-01956-7.</p>
+                <p>[17] P. Singh, S. Gupta, and V. Gupta, "Multi-objective hyperparameter optimization on gradient-boosting for breast cancer detection," International Journal of System Assurance Engineering and Management, 2023. doi: 10.1007/s13198-023-01955-8.</p>
+                <p>[18] P. Singh and S. Sharma, "A literature review on automatic comment generation using deep learning techniques," 2022 3rd International Conference on Issues and Challenges in Intelligent Computing Techniques (ICICT), Ghaziabad, India, 2022, pp. 1–7. doi: 10.1109/ICICT55121.2022.10064537.</p>
+                <p>[19] R. Sirohi and P. Singh, "Automatic bug triaging analysis using machine learning techniques: A review," 2022 3rd International Conference on Issues and Challenges in Intelligent Computing Techniques (ICICT), Ghaziabad, India, 2022, pp. 1–8. doi: 10.1109/ICICT55121.2022.10064589.</p>
+            </div>
+
+
+            <div class="conference-section">
+                <h3>2021-2022</h3>
+                <p>[20] A. Kumar and P. Singh, "A Comparative Analysis of Machine Learning Algorithms for Sentiment Analysis," in <strong>International Conference on Computational Intelligence and Data Science</strong>, 2021.</p>
+                <p>[21] S. Sharma and P. Singh, "Deep Learning Approaches for Cybersecurity Threat Detection: A Survey," in <strong>International Conference on Emerging Trends in Engineering and Technology</strong>, 2022.</p>
+            </div>
+
+
+
+            
+            
         </div>
     </div>
+    
+    
+    
 
     <div class="container my-4">
-        <div class="p-5 bg-light rounded-3 ">
+        <div class="p-5 bg-light rounded-3">
             <h2 class="display-5 fw-bold">Journals</h2>
-           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi quo excepturi quisquam ratione inventore, distinctio ducimus aspernatur nesciunt quas maiores ad ea atque amet. Eaque laudantium perspiciatis necessitatibus explicabo exercitationem?</p>
-           
-           
+            <h3>2023-2024</h3>
+    
+            <div class="card my-3 p-3 shadow-sm">
+                <p><strong>[1] R. Malhota and P. Singh</strong>, “DHG-BiGRU: Dual-Attention based Hierarchical Gated BiGRU for Software Defect Prediction,” <em>Information and Software Technology</em>, SCI, communicated.</p>
+            </div>
+    
+            <div class="card my-3 p-3 shadow-sm">
+                <p><strong>[2] P. Singh, K. Bansal, and K. Bisht</strong>, “Harnessing Tc-Ls-Ga-At: A novel deep learning based hybrid approach for wind power forecasting,” <em>International Journal of System Assurance Engineering and Management</em>, 2024.</p>
+            </div>
+    
+            <div class="card my-3 p-3 shadow-sm">
+                <p><strong>[3] R. Malhotra and P. Singh</strong>, "Recent advances in deep learning models: A systematic literature review," <em>Multimedia Tools and Applications</em>, vol. 82, pp. 44977–45060, 2023. <a href="https://doi.org/10.1007/s11042-023-15295-z" target="_blank">doi: 10.1007/s11042-023-15295-z</a>.</p>
+            </div>
+    
+            <div class="card my-3 p-3 shadow-sm">
+                <p><strong>[4] P. Singh, S. Gupta, and V. Gupta</strong>, "Multi-objective hyperparameter optimization on gradient-boosting for breast cancer detection," <em>International Journal of System Assurance Engineering and Management</em>, vol. 15, pp. 1676–1686, 2024. <a href="https://doi.org/10.1007/s13198-023-01955-8" target="_blank">doi: 10.1007/s13198-023-01955-8</a>.</p>
+            </div>
+    
+            <div class="card my-3 p-3 shadow-sm">
+                <p><strong>[5] P. Singh, C. Kumar, and A. Kumar</strong>, "Next-LSTM: A novel LSTM-based image captioning technique," <em>International Journal of System Assurance Engineering and Management</em>, vol. 14, pp. 1492–1503, 2023. <a href="https://doi.org/10.1007/s13198-023-01956-7" target="_blank">doi: 10.1007/s13198-023-01956-7</a>.</p>
+            </div>
+
+            <h3>2020-2021</h3>
+            <div class="card my-3 p-3 shadow-sm">
+                <p><strong>[6] R. Malhotra and P. Singh</strong>, "Exploiting bad-smells and object-oriented characteristics to prioritize classes for refactoring," <em>International Journal of System Assurance Engineering and Management</em>, vol. 11, Suppl. 2, pp. 133–144, 2020. <a href="https://doi.org/10.1007/s13198-020-01001-x" target="_blank">doi: 10.1007/s13198-020-01001-x</a>.</p>
+            </div>
+
+
         </div>
     </div>
+    
 
         <!-- Hero Section -->
         <header class="bg-dark text-white text-center py-5">
@@ -158,3 +234,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
